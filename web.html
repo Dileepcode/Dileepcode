@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Food Web Page</title>
+</head>
+<script>
+    // JavaScript code for the food web page
+
+// Function to handle form submission
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent the form from submitting and refreshing the page
+    
+    // Get the form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    // Simulate form submission (replace with actual submission code)
+    alert(`Form submitted with:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    
+    // Clear the form fields
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+}
+
+// Add a form submission event listener
+const form = document.querySelector('form');
+form.addEventListener('submit', handleSubmit);
+
+</script>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+    background-color: #f2f2f2;
+}
+
+.featured-food {
+    text-align: center;
+    padding: 50px;
+    background-color: #181a1b;
+    color: white;
+}
+
+.featured-food .food-item {
+    margin: 20px;
+    display: inline-block;
+    
+}
+
+.contact-form {
+    text-align: center;
+    padding: 50px;
+    background-color: #f2f2f2;
+}
+
+.contact-form form {
+    display: inline-block;
+    text-align: left;
+}
+
+.contact-form label, .contact-form input, .contact-form textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+img{
+    height: 500px;
+    width: 500px;
+}
+
+input, textarea{
+    background-color: #3b3b3b;
+    color: black;
+}
+
+label{
+    color: white;
+}
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Delicious Food Paradise</h1>
+        <p>Explore the most mouthwatering dishes!</p>
+    </header>
+
+    <section class="featured-food">
+        <h2>Featured Food</h2>
+        <div class="food-item">
+            <img src="imgs1.webp" alt="Burger">
+            <h3>Burger</h3>
+            <p>A juicy burger with all the fixings.</p>
+        </div>
+        <div class="food-item">
+            <img src="imgs.jpg" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>Delicious pizza with a variety of toppings.</p>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <h2 id="Contact">Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
